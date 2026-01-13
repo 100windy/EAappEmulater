@@ -8,7 +8,7 @@
     x:Name="Window_Account"
     Title="{DynamicResource Windows.AccountWindow.Title}"
     Width="600"
-    Height="380"
+    Height="400"
     CaptionBackground="#FDFDFD"
     Closing="Window_Account_Closing"
     ContentRendered="Window_Account_ContentRendered"
