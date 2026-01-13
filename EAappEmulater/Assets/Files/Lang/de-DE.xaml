@@ -323,4 +323,22 @@
     <sys:String x:Key="Globals.SetDefaultLanguageError">Nicht unterstützte Standardsprache, die Systemsprache wird verwendet</sys:String>
     <sys:String x:Key="Globals.SetDefaultLanguageSuccess">Standard-Sprache erfolgreich gesetzt {0}</sys:String>
 
+    <!--Windows.AccountWindow.xaml AutoLogin related resources-->
+    <sys:String x:Key="Windows.AccountWindow.AutoLoginEnabled">Automatisches Login aktiviert</sys:String>
+    <sys:String x:Key="Windows.AccountWindow.AutoLoginDisabled">Automatisches Login deaktiviert</sys:String>
+    <sys:String x:Key="Windows.AccountWindow.AutoLoginDisabledByUser">Benutzer hat Konto manuell gewechselt, automatisches Login deaktiviert</sys:String>
+
+    <!--Globals.cs AutoLogin related resources-->
+    <sys:String x:Key="Globals.AutoLoginSetting">Automatische Login-Einstellung: {0}</sys:String>
+    <sys:String x:Key="Globals.AutoLoginParseError">Fehler beim Parsen der automatischen Login-Konfiguration: {0}</sys:String>
+    <sys:String x:Key="Globals.AutoLoginNotConfigured">Automatische Login-Konfiguration nicht gesetzt, Standardwert wird verwendet</sys:String>
+
+    <!--App.xaml.cs AutoLogin related resources-->
+    <sys:String x:Key="App.CheckAutoLogin">Automatische Login-Einstellungen werden überprüft...</sys:String>
+    <sys:String x:Key="App.AutoLoginEnabled">Automatisches Login aktiviert, automatischer Login-Prozess wird gestartet</sys:String>
+    <sys:String x:Key="App.AutoLoginDisabled">Automatisches Login deaktiviert, Kontoauswahlfenster wird angezeigt</sys:String>
+    <sys:String x:Key="App.AutoLoginCookieValid">Automatisches Login: Cookie gültig, automatischer Login wird gestartet</sys:String>
+    <sys:String x:Key="App.AutoLoginCookieInvalid">Automatisches Login: Cookie ungültig, Kontoauswahlfenster wird angezeigt</sys:String>
+    <sys:String x:Key="App.AutoLoginCheckFailed">Automatische Login-Überprüfung fehlgeschlagen: {0}</sys:String>
+
 </ResourceDictionary>

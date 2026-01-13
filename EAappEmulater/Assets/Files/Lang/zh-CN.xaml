@@ -97,6 +97,9 @@
     <sys:String x:Key="Windows.AccountWindow.ShowSid">显示选中账号Sid信息</sys:String>
     <sys:String x:Key="Windows.AccountWindow.SwitchLang">切换语言</sys:String>
     <sys:String x:Key="Windows.AccountWindow.AutoLogin">自动登录</sys:String>
+    <sys:String x:Key="Windows.AccountWindow.AutoLoginEnabled">自动登录已启用</sys:String>
+    <sys:String x:Key="Windows.AccountWindow.AutoLoginDisabled">自动登录已禁用</sys:String>
+    <sys:String x:Key="Windows.AccountWindow.AutoLoginDisabledByUser">用户主动切换账号，已关闭自动登录功能</sys:String>
 
     
     <!--Windows/Dialog/AdvancedWindow.xaml-->
@@ -351,6 +354,9 @@
     <sys:String x:Key="Globals.SaveGlobalConfigProcess">开始保存全局配置文件...</sys:String>
     <sys:String x:Key="Globals.SaveGlobalConfigPath">当前保存配置文件路径 {0}</sys:String>
     <sys:String x:Key="Globals.SaveGlobalConfigSuccess">保存全局配置文件成功</sys:String>
+    <sys:String x:Key="Globals.AutoLoginSetting">自动登录设置: {0}</sys:String>
+    <sys:String x:Key="Globals.AutoLoginParseError">自动登录配置解析失败: {0}</sys:String>
+    <sys:String x:Key="Globals.AutoLoginNotConfigured">自动登录配置未设置，使用默认值</sys:String>
 
     
     <!--App.xaml.cs-->
@@ -367,5 +373,11 @@
     <sys:String x:Key="App.TCPPortCheckSuccess">当前系统 TCP端口 检测正常</sys:String>
     <sys:String x:Key="App.TaskEx">Task线程捕获到未经处理的异常</sys:String>
     <sys:String x:Key="App.ErrorFileName">检测到当前模拟器程序名不为EADesktop.exe，请修改为EADesktop.exe后再启动</sys:String>
+    <sys:String x:Key="App.CheckAutoLogin">检查自动登录设置...</sys:String>
+    <sys:String x:Key="App.AutoLoginEnabled">自动登录已启用，开始自动登录流程</sys:String>
+    <sys:String x:Key="App.AutoLoginDisabled">自动登录已禁用，显示账号选择窗口</sys:String>
+    <sys:String x:Key="App.AutoLoginCookieValid">自动登录：Cookie有效，开始自动登录</sys:String>
+    <sys:String x:Key="App.AutoLoginCookieInvalid">自动登录：Cookie无效，显示账号选择窗口</sys:String>
+    <sys:String x:Key="App.AutoLoginCheckFailed">自动登录检查失败：{0}</sys:String>
 
 </ResourceDictionary>

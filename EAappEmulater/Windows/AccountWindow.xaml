@@ -180,6 +180,15 @@
                     </DockPanel>
                 </DockPanel>
 
+                <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                    <ui:IconHeader Title="{DynamicResource Windows.AccountWindow.AutoLogin}" />
+                    <ToggleButton
+                        x:Name="ToggleButton_AutoLogin"
+                        Margin="10,0,0,0"
+                        VerticalAlignment="Center"
+                        IsChecked="{Binding AutoLoginEnabled, Mode=TwoWay}" />
+                </StackPanel>
+
                 <ui:IconHeader Title="Remid" />
                 <ui:TextBoxHint
                     x:Name="TextBoxHint_Remid"

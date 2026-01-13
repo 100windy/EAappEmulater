@@ -368,4 +368,22 @@
     <sys:String x:Key="App.TaskEx">Eccezione non gestita nel thread Task</sys:String>
     <sys:String x:Key="App.ErrorFileName">Il nome dell'applicazione simulata non è EADesktop.exe, rinomina in EADesktop.exe e riavvia</sys:String>
 
+    <!--Windows.AccountWindow.xaml AutoLogin related resources-->
+    <sys:String x:Key="Windows.AccountWindow.AutoLoginEnabled">Accesso automatico attivato</sys:String>
+    <sys:String x:Key="Windows.AccountWindow.AutoLoginDisabled">Accesso automatico disattivato</sys:String>
+    <sys:String x:Key="Windows.AccountWindow.AutoLoginDisabledByUser">L'utente ha cambiato manualmente l'account, accesso automatico disattivato</sys:String>
+
+    <!--Globals.cs AutoLogin related resources-->
+    <sys:String x:Key="Globals.AutoLoginSetting">Impostazione dell'accesso automatico: {0}</sys:String>
+    <sys:String x:Key="Globals.AutoLoginParseError">Errore nell'analisi della configurazione dell'accesso automatico: {0}</sys:String>
+    <sys:String x:Key="Globals.AutoLoginNotConfigured">Configurazione dell'accesso automatico non impostata, utilizzo del valore predefinito</sys:String>
+
+    <!--App.xaml.cs AutoLogin related resources-->
+    <sys:String x:Key="App.CheckAutoLogin">Controllo delle impostazioni dell'accesso automatico in corso...</sys:String>
+    <sys:String x:Key="App.AutoLoginEnabled">Accesso automatico attivato, avvio del processo di accesso automatico</sys:String>
+    <sys:String x:Key="App.AutoLoginDisabled">Accesso automatico disattivato, visualizzazione della finestra di selezione dell'account</sys:String>
+    <sys:String x:Key="App.AutoLoginCookieValid">Accesso automatico: Cookie valido, avvio dell'accesso automatico</sys:String>
+    <sys:String x:Key="App.AutoLoginCookieInvalid">Accesso automatico: Cookie non valido, visualizzazione della finestra di selezione dell'account</sys:String>
+    <sys:String x:Key="App.AutoLoginCheckFailed">Controllo dell'accesso automatico fallito: {0}</sys:String>
+
 </ResourceDictionary>

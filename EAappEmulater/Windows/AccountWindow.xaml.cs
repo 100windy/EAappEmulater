@@ -1,13 +1,8 @@
-﻿using CommunityToolkit.Mvvm.Input;
+﻿﻿using CommunityToolkit.Mvvm.Input;
 using EAappEmulater.Core;
 using EAappEmulater.Helper;
 using EAappEmulater.Models;
 using EAappEmulater.Utils;
-using EAappEmulater.Api;
-using EAappEmulater.Enums;
-using Newtonsoft.Json.Linq;
-using System.Collections.ObjectModel;
-using System.ComponentModel;
 
 namespace EAappEmulater.Windows;
 
@@ -52,6 +47,21 @@ public partial class AccountWindow : INotifyPropertyChanged
         }
     }
 
+    private bool _autoLoginEnabled = false;
+    public bool AutoLoginEnabled
+    {
+        get => _autoLoginEnabled;
+        set
+        {
+            if (_autoLoginEnabled == value) return;
+            _autoLoginEnabled = value;
+            OnPropertyChanged(nameof(AutoLoginEnabled));
+            
+            Globals.AutoLoginEnabled = value;
+            Globals.Write();
+        }
+    }
+
     private void OnPropertyChanged(string name) => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
 
     public AccountWindow()
@@ -65,6 +75,8 @@ public partial class AccountWindow : INotifyPropertyChanged
         CurrentLanguage = string.IsNullOrWhiteSpace(Globals.Language) ? (Globals.DefaultLanguage ?? "") : Globals.Language;
         if (string.IsNullOrWhiteSpace(CurrentLanguage) && LanguageList.Count > 0)
             CurrentLanguage = LanguageList[0].Code;
+
+        AutoLoginEnabled = Globals.AutoLoginEnabled;
 
         DataContext = this;
     }
@@ -237,6 +249,10 @@ public partial class AccountWindow : INotifyPropertyChanged
     [RelayCommand]
     private async void ChangeAccount()
     {
+        // 用户主动切换账号时，关闭自动登录功能
+        if (AutoLoginEnabled)
+            AutoLoginEnabled = false;
+
         // 保存数据
         if (!SaveAccountCookie(true))
             return;
