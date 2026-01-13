@@ -1,5 +1,6 @@
-﻿using EAappEmulater.Helper;
+﻿﻿using EAappEmulater.Helper;
 using EAappEmulater.Utils;
+using EAappEmulater.Windows;
 
 namespace EAappEmulater;
 
@@ -152,6 +153,8 @@ using (Process currentProcess = Process.GetCurrentProcess())
 
         //////////////////////////////////////////////////////
 
+        CheckAutoLogin();
+
         base.OnStartup(e);
     }
 
@@ -259,5 +262,60 @@ using (Process currentProcess = Process.GetCurrentProcess())
 
         Current.Resources.MergedDictionaries.Add(dict);
         Globals.Language = lang;
+    }
+
+    /// <summary>
+    /// 检查并执行自动登录
+    /// </summary>
+    private void CheckAutoLogin()
+    {
+        try
+        {
+            LoggerHelper.Info(I18nHelper.I18n._("App.CheckAutoLogin"));
+            
+            // 检查自动登录是否启用
+            if (!Globals.AutoLoginEnabled)
+            {
+                LoggerHelper.Info(I18nHelper.I18n._("App.AutoLoginDisabled"));
+                ShowAccountWindow();
+                return;
+            }
+
+            LoggerHelper.Info(I18nHelper.I18n._("App.AutoLoginEnabled"));
+
+            // 检查当前选中的账号是否有有效的Cookie
+            var accountIniPath = Globals.GetAccountIniPath();
+            var remid = IniHelper.ReadString("Cookie", "Remid", accountIniPath);
+            var sid = IniHelper.ReadString("Cookie", "Sid", accountIniPath);
+
+            if (string.IsNullOrWhiteSpace(remid) || string.IsNullOrWhiteSpace(sid))
+            {
+                LoggerHelper.Warn(I18nHelper.I18n._("App.AutoLoginCookieInvalid"));
+                ShowAccountWindow();
+                return;
+            }
+
+            LoggerHelper.Info(I18nHelper.I18n._("App.AutoLoginCookieValid"));
+            
+            // 直接启动加载窗口，跳过账号选择
+            var loadWindow = new LoadWindow();
+            Current.MainWindow = loadWindow;
+            loadWindow.Show();
+        }
+        catch (Exception ex)
+        {
+            LoggerHelper.Error(I18nHelper.I18n._("App.AutoLoginCheckFailed", ex.Message));
+            ShowAccountWindow();
+        }
+    }
+
+    /// <summary>
+    /// 显示账号选择窗口
+    /// </summary>
+    private void ShowAccountWindow()
+    {
+        var accountWindow = new AccountWindow();
+        Current.MainWindow = accountWindow;
+        accountWindow.Show();
     }
 }

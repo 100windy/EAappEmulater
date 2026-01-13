@@ -97,6 +97,9 @@
     <sys:String x:Key="Windows.AccountWindow.ShowSid">Mostrar informacoes de Sid da conta selecionada</sys:String>
     <sys:String x:Key="Windows.AccountWindow.SwitchLang">Mudar idioma</sys:String>
     <sys:String x:Key="Windows.AccountWindow.AutoLogin">Login automatico</sys:String>
+    <sys:String x:Key="Windows.AccountWindow.AutoLoginEnabled">Login automatico ativado</sys:String>
+    <sys:String x:Key="Windows.AccountWindow.AutoLoginDisabled">Login automatico desativado</sys:String>
+    <sys:String x:Key="Windows.AccountWindow.AutoLoginDisabledByUser">Usuario trocou de conta manualmente, login automatico desativado</sys:String>
 
     
     <!--Windows/Dialog/AdvancedWindow.xaml-->
@@ -351,6 +354,9 @@
     <sys:String x:Key="Globals.SaveGlobalConfigProcess">Iniciando salvamento do arquivo de configuracao global...</sys:String>
     <sys:String x:Key="Globals.SaveGlobalConfigPath">Caminho atual de salvamento do arquivo de configuracao {0}</sys:String>
     <sys:String x:Key="Globals.SaveGlobalConfigSuccess">Arquivo de configuracao global salvo com sucesso</sys:String>
+    <sys:String x:Key="Globals.AutoLoginSetting">Configuracao de login automatico: {0}</sys:String>
+    <sys:String x:Key="Globals.AutoLoginParseError">Falha ao analisar configuracao de login automatico: {0}</sys:String>
+    <sys:String x:Key="Globals.AutoLoginNotConfigured">Configuracao de login automatico nao definida, usando valor padrao</sys:String>
 
     
     <!--App.xaml.cs-->
@@ -367,5 +373,11 @@
     <sys:String x:Key="App.TCPPortCheckSuccess">Verificacao de portas TCP concluida com sucesso</sys:String>
     <sys:String x:Key="App.TaskEx">Thread de Task capturou excecao nao tratada</sys:String>
     <sys:String x:Key="App.ErrorFileName">O nome do programa do emulador atual nao e EADesktop.exe, renomeie para EADesktop.exe e reabra</sys:String>
+    <sys:String x:Key="App.CheckAutoLogin">Verificando configuracoes de login automatico...</sys:String>
+    <sys:String x:Key="App.AutoLoginEnabled">Login automatico ativado, iniciando processo de login automatico</sys:String>
+    <sys:String x:Key="App.AutoLoginDisabled">Login automatico desativado, mostrando janela de selecao de conta</sys:String>
+    <sys:String x:Key="App.AutoLoginCookieValid">Login automatico: Cookie valido, iniciando login automatico</sys:String>
+    <sys:String x:Key="App.AutoLoginCookieInvalid">Login automatico: Cookie invalido, mostrando janela de selecao de conta</sys:String>
+    <sys:String x:Key="App.AutoLoginCheckFailed">Falha na verificacao do login automatico: {0}</sys:String>
 
 </ResourceDictionary>

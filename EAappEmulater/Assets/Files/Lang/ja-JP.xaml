@@ -97,6 +97,9 @@
     <sys:String x:Key="Windows.AccountWindow.ShowSid">選択したアカウントの Sid 情報を表示</sys:String>
     <sys:String x:Key="Windows.AccountWindow.SwitchLang">言語を切り替え</sys:String>
     <sys:String x:Key="Windows.AccountWindow.AutoLogin">自動ログイン</sys:String>
+    <sys:String x:Key="Windows.AccountWindow.AutoLoginEnabled">自動ログイン有効</sys:String>
+    <sys:String x:Key="Windows.AccountWindow.AutoLoginDisabled">自動ログイン無効</sys:String>
+    <sys:String x:Key="Windows.AccountWindow.AutoLoginDisabledByUser">ユーザーが手動でアカウントを切り替えたため、自動ログインが無効になりました</sys:String>
 
     
     <!--Windows/Dialog/AdvancedWindow.xaml-->
@@ -351,6 +354,9 @@
     <sys:String x:Key="Globals.SaveGlobalConfigProcess">グローバル設定ファイルの保存を開始します...</sys:String>
     <sys:String x:Key="Globals.SaveGlobalConfigPath">現在の保存設定ファイルパス {0}</sys:String>
     <sys:String x:Key="Globals.SaveGlobalConfigSuccess">グローバル設定ファイルの保存に成功しました</sys:String>
+    <sys:String x:Key="Globals.AutoLoginSetting">自動ログイン設定: {0}</sys:String>
+    <sys:String x:Key="Globals.AutoLoginParseError">自動ログイン設定の解析に失敗しました: {0}</sys:String>
+    <sys:String x:Key="Globals.AutoLoginNotConfigured">自動ログイン設定が設定されていません。デフォルト値を使用します</sys:String>
 
     
     <!--App.xaml.cs-->
@@ -367,5 +373,11 @@
     <sys:String x:Key="App.TCPPortCheckSuccess">現在のシステム TCP ポートの検査は正常です</sys:String>
     <sys:String x:Key="App.TaskEx">Task スレッドで未処理の例外がキャッチされました</sys:String>
     <sys:String x:Key="App.ErrorFileName">現在のエミュレータープログラム名が EADesktop.exe ではありません。EADesktop.exe に変更してから起動してください</sys:String>
+    <sys:String x:Key="App.CheckAutoLogin">自動ログイン設定を確認中...</sys:String>
+    <sys:String x:Key="App.AutoLoginEnabled">自動ログインが有効です。自動ログインプロセスを開始します</sys:String>
+    <sys:String x:Key="App.AutoLoginDisabled">自動ログインが無効です。アカウント選択ウィンドウを表示します</sys:String>
+    <sys:String x:Key="App.AutoLoginCookieValid">自動ログイン: Cookie が有効です。自動ログインを開始します</sys:String>
+    <sys:String x:Key="App.AutoLoginCookieInvalid">自動ログイン: Cookie が無効です。アカウント選択ウィンドウを表示します</sys:String>
+    <sys:String x:Key="App.AutoLoginCheckFailed">自動ログインの確認に失敗しました: {0}</sys:String>
 
 </ResourceDictionary>

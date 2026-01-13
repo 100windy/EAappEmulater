@@ -368,4 +368,22 @@
     <sys:String x:Key="App.TaskEx">Exception non gérée capturée par le thread Task</sys:String>
     <sys:String x:Key="App.ErrorFileName">Le nom de l'exécutable n'est pas EADesktop.exe. Veuillez le renommer en EADesktop.exe puis relancer</sys:String>
 
+    <!--Windows.AccountWindow.xaml AutoLogin related resources-->
+    <sys:String x:Key="Windows.AccountWindow.AutoLoginEnabled">Connexion automatique activée</sys:String>
+    <sys:String x:Key="Windows.AccountWindow.AutoLoginDisabled">Connexion automatique désactivée</sys:String>
+    <sys:String x:Key="Windows.AccountWindow.AutoLoginDisabledByUser">L'utilisateur a changé manuellement de compte, connexion automatique désactivée</sys:String>
+
+    <!--Globals.cs AutoLogin related resources-->
+    <sys:String x:Key="Globals.AutoLoginSetting">Paramètre de connexion automatique : {0}</sys:String>
+    <sys:String x:Key="Globals.AutoLoginParseError">Échec de l'analyse de la configuration de connexion automatique : {0}</sys:String>
+    <sys:String x:Key="Globals.AutoLoginNotConfigured">Configuration de connexion automatique non définie, utilisation de la valeur par défaut</sys:String>
+
+    <!--App.xaml.cs AutoLogin related resources-->
+    <sys:String x:Key="App.CheckAutoLogin">Vérification des paramètres de connexion automatique...</sys:String>
+    <sys:String x:Key="App.AutoLoginEnabled">Connexion automatique activée, démarrage du processus de connexion automatique</sys:String>
+    <sys:String x:Key="App.AutoLoginDisabled">Connexion automatique désactivée, affichage de la fenêtre de sélection de compte</sys:String>
+    <sys:String x:Key="App.AutoLoginCookieValid">Connexion automatique : Cookie valide, démarrage de la connexion automatique</sys:String>
+    <sys:String x:Key="App.AutoLoginCookieInvalid">Connexion automatique : Cookie invalide, affichage de la fenêtre de sélection de compte</sys:String>
+    <sys:String x:Key="App.AutoLoginCheckFailed">Échec de la vérification de la connexion automatique : {0}</sys:String>
+
 </ResourceDictionary>

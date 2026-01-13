@@ -97,6 +97,9 @@
     <sys:String x:Key="Windows.AccountWindow.ShowSid">Показать информацию о Sid выбранного аккаунта</sys:String>
     <sys:String x:Key="Windows.AccountWindow.SwitchLang">Сменить язык</sys:String>
     <sys:String x:Key="Windows.AccountWindow.AutoLogin">Автовход</sys:String>
+    <sys:String x:Key="Windows.AccountWindow.AutoLoginEnabled">Автовход включен</sys:String>
+    <sys:String x:Key="Windows.AccountWindow.AutoLoginDisabled">Автовход отключен</sys:String>
+    <sys:String x:Key="Windows.AccountWindow.AutoLoginDisabledByUser">Пользователь вручную переключил аккаунт, автовход отключен</sys:String>
 
     
     <!--Windows/Dialog/AdvancedWindow.xaml-->
@@ -351,6 +354,9 @@
     <sys:String x:Key="Globals.SaveGlobalConfigProcess">Начало сохранения глобального конфигурационного файла...</sys:String>
     <sys:String x:Key="Globals.SaveGlobalConfigPath">Текущий путь сохранения конфигурационного файла {0}</sys:String>
     <sys:String x:Key="Globals.SaveGlobalConfigSuccess">Успешное сохранение глобального конфигурационного файла</sys:String>
+    <sys:String x:Key="Globals.AutoLoginSetting">Настройка автовхода</sys:String>
+    <sys:String x:Key="Globals.AutoLoginParseError">Ошибка разбора настройки автовхода</sys:String>
+    <sys:String x:Key="Globals.AutoLoginNotConfigured">Автовход не настроен</sys:String>
 
     
     <!--App.xaml.cs-->
@@ -367,5 +373,11 @@
     <sys:String x:Key="App.TCPPortCheckSuccess">Проверка TCP-портов в системе в порядке</sys:String>
     <sys:String x:Key="App.TaskEx">Поток Task перехватил необработанное исключение</sys:String>
     <sys:String x:Key="App.ErrorFileName">Обнаружено, что имя текущей программы-эмулятора не равно EADesktop.exe, измените имя на EADesktop.exe и перезапустите</sys:String>
+    <sys:String x:Key="App.CheckAutoLogin">Проверка автовхода...</sys:String>
+    <sys:String x:Key="App.AutoLoginEnabled">Автовход включен</sys:String>
+    <sys:String x:Key="App.AutoLoginDisabled">Автовход отключен</sys:String>
+    <sys:String x:Key="App.AutoLoginCookieValid">Cookie действителен, автовход выполнен</sys:String>
+    <sys:String x:Key="App.AutoLoginCookieInvalid">Cookie недействителен, автовход отменен</sys:String>
+    <sys:String x:Key="App.AutoLoginCheckFailed">Проверка автоматического входа не удалась: {0}</sys:String>
 
 </ResourceDictionary>

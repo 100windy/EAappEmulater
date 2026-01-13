@@ -28,6 +28,10 @@ public static class Globals
 
     public static string DefaultLanguage { get; set; } = string.Empty;
 
+    /// <summary>
+    /// 是否启用自动登录
+    /// </summary>
+    public static bool AutoLoginEnabled { get; set; } = false;
 
     static Globals()
     {
@@ -43,6 +47,7 @@ public static class Globals
 
         var slot = IniHelper.ReadString("Globals", "AccountSlot", _configPath);
         var defaultLanguage = IniHelper.ReadString("Globals", "lang", _configPath);
+        var autoLoginEnabled = IniHelper.ReadString("Globals", "AutoLoginEnabled", _configPath);
 
         LoggerHelper.Info(I18nHelper.I18n._("Globals.CurrentConfigPath", _configPath));
         LoggerHelper.Info(I18nHelper.I18n._("Globals.ReadConfigSuccess", slot));
@@ -80,6 +85,23 @@ public static class Globals
             }
         }
 
+        if (!string.IsNullOrWhiteSpace(autoLoginEnabled))
+        {
+            if (bool.TryParse(autoLoginEnabled, out bool autoLogin))
+            {
+                AutoLoginEnabled = autoLogin;
+                LoggerHelper.Info(I18nHelper.I18n._("Globals.AutoLoginSetting", AutoLoginEnabled));
+            }
+            else
+            {
+                LoggerHelper.Warn(I18nHelper.I18n._("Globals.AutoLoginParseError", autoLoginEnabled));
+            }
+        }
+        else
+        {
+            LoggerHelper.Info(I18nHelper.I18n._("Globals.AutoLoginNotConfigured"));
+        }
+
         LoggerHelper.Info(I18nHelper.I18n._("Globals.ReadGlobalConfigSuccess"));
     }
 
@@ -98,6 +120,7 @@ public static class Globals
 
             IniHelper.WriteString("Globals", "AccountSlot", $"{AccountSlot}", _configPath);
             IniHelper.WriteString("Globals", "lang", DefaultLanguage ?? string.Empty, _configPath);
+            IniHelper.WriteString("Globals", "AutoLoginEnabled", $"{AutoLoginEnabled}", _configPath);
 
             LoggerHelper.Info(I18nHelper.I18n._("Globals.SaveGlobalConfigPath", _configPath));
             LoggerHelper.Info(I18nHelper.I18n._("Globals.SaveGlobalConfigSuccess"));
